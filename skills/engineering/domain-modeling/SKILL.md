@@ -57,6 +57,10 @@ When domain relationships are being discussed, stress-test them with specific sc
 
 When the user states how something works, check whether the code agrees. If you find a contradiction, surface it: "Your code cancels entire Orders, but you just said partial cancellation is possible — which is right?"
 
+### Decompose blocking constraints
+
+When a constraint appears to force dropping a requirement, don't accept the trade-off yet. Decompose the constraint into its independent axes and look for the design that satisfies all of them at once — concede a requirement only after that decomposition genuinely fails. "You're treating 'works offline' and 'always fresh' as mutually exclusive, but those are separate axes — what design serves both?"
+
 ### Update CONTEXT.md inline
 
 When a term is resolved, update `CONTEXT.md` right there. Don't batch these up — capture them as they happen. Use the format in [CONTEXT-FORMAT.md](./CONTEXT-FORMAT.md).
